@@ -1,0 +1,24 @@
+---
+train:
+  params:
+    batch_size: 64
+    epoch: 5
+    lr: 0.00001
+    decay: 0.1
+    decay_step:
+      - 8
+  save:
+    save_path: "C:/Users/jchao/Desktop/AFF-Net-main/AFF-Net-main"
+    model_name: "AFF-Net"
+    step: 1
+  data:
+    path: "D:/MPIIFaceGaze"
+test:
+   load:
+      begin_step: 1
+      end_step: 12
+      steps: 1
+      model_name: "AFF-Net"
+      load_path: "path/to/save/the/model"
+   data:
+      path: "path/of/the/GazeCapture/dataset"
